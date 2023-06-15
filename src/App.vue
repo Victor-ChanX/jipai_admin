@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion:
+ * @Version: 1.0
+ * @Author: pj
+ * @Date: 2023-06-13 11:45:47
+ * @LastEditors: pj
+ * @LastEditTime: 2023-06-13 15:44:54
+-->
 <template>
   <a-config-provider :locale="locale">
     <div id="app">
@@ -26,3 +34,12 @@ export default {
   }
 }
 </script>
+
+<style>
+@font-face {
+  font-family: 'MyFont';  /* 自定义的字体名称 */
+  src: url('/public/fonts/BEBAS-1.ttf') format('truetype');  /* 字体文件的路径和格式 */
+  font-weight: normal;  /* 字体的粗细 */
+  font-style: normal;  /* 字体的风格 */
+}
+</style>

@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @Version: 1.0
+ * @Author: pj
+ * @Date: 2023-06-13 11:45:47
+ * @LastEditors: pj
+ * @LastEditTime: 2023-06-13 16:31:47
+ */
 import antd from 'ant-design-vue/es/locale-provider/zh_CN'
 import momentCN from 'moment/locale/zh-cn'
 import global from './zh-CN/global'
@@ -9,6 +17,7 @@ import dashboard from './zh-CN/dashboard'
 import form from './zh-CN/form'
 import result from './zh-CN/result'
 import account from './zh-CN/account'
+import reserve from './zh-CN/reserve/title'
 
 const components = {
   antLocale: antd,
@@ -30,5 +39,6 @@ export default {
   ...dashboard,
   ...form,
   ...result,
-  ...account
+  ...account,
+  ...reserve
 }

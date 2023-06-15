@@ -25,6 +25,7 @@
     "lodash.get": "^4.4.2",
     "lodash.pick": "^4.4.0",
     "md5": "^2.3.0",
+    "mescroll.js": "^1.4.2",
     "mockjs2": "1.0.8",
     "moment": "^2.29.2",
     "nprogress": "^0.2.0",

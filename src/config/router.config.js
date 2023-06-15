@@ -13,8 +13,36 @@ export const asyncRouterMap = [
     name: 'index',
     component: BasicLayout,
     meta: { title: 'menu.home' },
-    redirect: '/dashboard/workplace',
+    redirect: '/reserve/frontPage',
     children: [
+      // reserve
+      {
+        path: '/reserve',
+        name: 'reserve',
+        redirect: '/reserve/frontPage',
+        component: RouteView,
+        meta: { title: 'menu.reserve', keepAlive: true, icon: bxAnaalyse, permission: ['reserve'] },
+        children: [
+          // {
+          //   path: '/dashboard/analysis/:pageNo([1-9]\\d*)?',
+          //   name: 'Analysis',
+          //   component: () => import('@/views/dashboard/Analysis'),
+          //   meta: { title: 'menu.dashboard.analysis', keepAlive: false, permission: ['dashboard'] }
+          // },
+          // 外部链接
+          // {
+          //   path: 'https://www.baidu.com/',
+          //   name: 'Monitor',
+          //   meta: { title: 'menu.dashboard.monitor', target: '_blank' }
+          // },
+          {
+            path: '/reserve/frontPage',
+            name: 'reserve',
+            component: () => import('@/views/reserve/frontPage'),
+            meta: { title: 'menu.reserve.frontPage', keepAlive: true, permission: ['reserve'] }
+          }
+        ]
+      },
       // dashboard
       {
         path: '/dashboard',

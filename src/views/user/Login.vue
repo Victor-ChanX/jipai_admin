@@ -20,7 +20,7 @@
               type="text"
               :placeholder="$t('user.login.username.placeholder')"
               v-decorator="[
-                'username',
+                'userName',
                 {rules: [{ required: true, message: $t('user.userName.required') }, { validator: handleUsernameOrEmail }], validateTrigger: 'change'}
               ]"
             >
@@ -33,7 +33,7 @@
               size="large"
               :placeholder="$t('user.login.password.placeholder')"
               v-decorator="[
-                'password',
+                'passWord',
                 {rules: [{ required: true, message: $t('user.password.required') }], validateTrigger: 'blur'}
               ]"
             >
@@ -114,7 +114,7 @@
 </template>
 
 <script>
-import md5 from 'md5'
+// import md5 from 'md5'
 import TwoStepCaptcha from '@/components/tools/TwoStepCaptcha'
 import { mapActions } from 'vuex'
 import { timeFix } from '@/utils/util'
@@ -181,15 +181,17 @@ export default {
 
       state.loginBtn = true
 
-      const validateFieldsKey = customActiveKey === 'tab1' ? ['username', 'password'] : ['mobile', 'captcha']
+      const validateFieldsKey = customActiveKey === 'tab1' ? ['userName', 'passWord'] : ['mobile', 'captcha']
 
       validateFields(validateFieldsKey, { force: true }, (err, values) => {
         if (!err) {
           console.log('login form', values)
           const loginParams = { ...values }
           delete loginParams.username
-          loginParams[!state.loginType ? 'email' : 'username'] = values.username
-          loginParams.password = md5(values.password)
+          loginParams[!state.loginType ? 'email' : 'userName'] = values.username
+          const encodedData = window.btoa(values.password) // 加密
+          // loginParams.password = md5(values.password)
+          loginParams.passWord = encodedData
           Login(loginParams)
             .then((res) => this.loginSuccess(res))
             .catch(err => this.requestFailed(err))

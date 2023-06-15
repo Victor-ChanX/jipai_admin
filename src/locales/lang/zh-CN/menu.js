@@ -35,5 +35,7 @@ export default {
     'menu.account.center': '个人中心',
     'menu.account.settings': '个人设置',
     'menu.account.trigger': '触发报错',
-    'menu.account.logout': '退出登录'
+    'menu.account.logout': '退出登录',
+    'menu.reserve': '排号预约',
+    'menu.reserve.frontPage': '预约'
 }
