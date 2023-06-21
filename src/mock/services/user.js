@@ -1,11 +1,11 @@
 import Mock from 'mockjs2'
 import { builder } from '../util'
 
-const info = options => {
+export function info (options) {
   console.log('options', options)
   const userInfo = {
     id: '4291d7da9005377ec9aec4a71ea837f',
-    name: '天野远子',
+    name: '测试餐厅',
     username: 'admin',
     password: '',
     avatar: '/avatar2.jpg',

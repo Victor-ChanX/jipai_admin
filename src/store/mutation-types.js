@@ -1,4 +1,12 @@
-export const ACCESS_TOKEN = 'Access-Token'
+/*
+ * @Descripttion:
+ * @Version: 1.0
+ * @Author: pj
+ * @Date: 2023-06-13 11:45:47
+ * @LastEditors: pj
+ * @LastEditTime: 2023-06-15 16:31:45
+ */
+export const ACCESS_TOKEN = 'token'
 
 export const SIDEBAR_TYPE = 'sidebar_type'
 export const TOGGLE_MOBILE_TYPE = 'is_mobile'

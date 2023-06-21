@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @Version: 1.0
+ * @Author: pj
+ * @Date: 2023-06-13 11:45:47
+ * @LastEditors: pj
+ * @LastEditTime: 2023-06-15 14:49:21
+ */
 import router, { resetRouter } from './router'
 import store from './store'
 import storage from 'store'
@@ -27,6 +35,7 @@ router.beforeEach((to, from, next) => {
       // check login user.roles is null
       if (store.getters.roles.length === 0) {
         // request login userInfo
+        console.log('执行permission.js文件', token)
         store
           .dispatch('GetInfo')
           .then(res => {

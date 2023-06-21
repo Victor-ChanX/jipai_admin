@@ -1,9 +1,18 @@
+/*
+ * @Descripttion:
+ * @Version: 1.0
+ * @Author: pj
+ * @Date: 2023-06-13 11:45:47
+ * @LastEditors: pj
+ * @LastEditTime: 2023-06-21 12:08:19
+ */
 import axios from 'axios'
 import store from '@/store'
 import storage from 'store'
 import notification from 'ant-design-vue/es/notification'
 import { VueAxios } from './axios'
 import { ACCESS_TOKEN } from '@/store/mutation-types'
+import router from '@/router'
 
 // 创建 axios 实例
 const request = axios.create({
@@ -14,6 +23,7 @@ const request = axios.create({
 
 // 异常拦截处理器
 const errorHandler = (error) => {
+  console.log(error, 'error')
   if (error.response) {
     const data = error.response.data
     // 从 localstorage 获取 token
@@ -54,6 +64,17 @@ request.interceptors.request.use(config => {
 
 // response interceptor
 request.interceptors.response.use((response) => {
+  if (response.data.code !== 0) {
+    notification.error({
+      message: response.data.msg
+    })
+    if (response.data.code === 401) {
+      store.dispatch('logouts').then(() => {
+        router.push({ name: 'login' })
+      })
+    }
+    return Promise.reject(new Error(response.data.msg))
+  }
   return response.data
 }, errorHandler)
 

@@ -4,14 +4,14 @@
  * @Author: pj
  * @Date: 2023-06-13 11:45:47
  * @LastEditors: pj
- * @LastEditTime: 2023-06-14 15:28:05
+ * @LastEditTime: 2023-06-20 15:19:00
  */
 import request from '@/utils/request'
 
 const userApi = {
   // Login: '/auth/login',
   Login: '/sys/login',
-  Logout: '/auth/logout',
+  Logout: '/sys/logout',
   ForgePassword: '/auth/forge-password',
   Register: '/auth/register',
   twoStepCode: '/auth/2step-code',

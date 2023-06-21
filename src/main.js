@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: zong
+ * @Version: 1.0
+ * @Author: pj
+ * @Date: 2023-06-13 11:45:47
+ * @LastEditors: pj
+ * @LastEditTime: 2023-06-19 14:38:40
+ */
 // with polyfills
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
@@ -20,9 +28,11 @@ import './core/lazy_use' // use lazy load components
 import './permission' // permission control
 import './utils/filter' // global filter
 import './global.less' // global style
+import '@/assets/fonts/iconfont/iconfont.js'
+import IconSvg from '@/components/IconSvg'
 
 Vue.config.productionTip = false
-
+Vue.component('icon-svg', IconSvg)
 // mount axios to `Vue.$http` and `this.$http`
 Vue.use(VueAxios)
 // use pro-layout components
