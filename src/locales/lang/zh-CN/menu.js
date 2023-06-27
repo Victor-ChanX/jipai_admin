@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @Version: 1.0
+ * @Author: pj
+ * @Date: 2023-06-13 11:45:47
+ * @LastEditors: pj
+ * @LastEditTime: 2023-06-21 14:54:21
+ */
 export default {
     'menu.welcome': '欢迎',
     'menu.home': '主页',
@@ -37,5 +45,6 @@ export default {
     'menu.account.trigger': '触发报错',
     'menu.account.logout': '退出登录',
     'menu.reserve': '排号预约',
-    'menu.reserve.frontPage': '预约'
+    'menu.reserve.frontPage': '预约',
+    'menu.reserve.privateRoom': '包间预约'
 }

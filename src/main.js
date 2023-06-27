@@ -4,7 +4,7 @@
  * @Author: pj
  * @Date: 2023-06-13 11:45:47
  * @LastEditors: pj
- * @LastEditTime: 2023-06-19 14:38:40
+ * @LastEditTime: 2023-06-23 20:31:22
  */
 // with polyfills
 import 'core-js/stable'
@@ -50,3 +50,12 @@ new Vue({
   created: bootstrap,
   render: h => h(App)
 }).$mount('#app')
+
+window.vm = new Vue({
+  router,
+  store,
+  i18n,
+  // init localstorage, vuex, Logo message
+  component: { App },
+  template: '<App/>'
+})

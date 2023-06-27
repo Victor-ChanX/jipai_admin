@@ -4,7 +4,7 @@
  * @Author: pj
  * @Date: 2023-06-13 11:57:16
  * @LastEditors: pj
- * @LastEditTime: 2023-06-20 16:30:30
+ * @LastEditTime: 2023-06-22 13:51:08
 -->
 <template>
   <div class="reserve">
@@ -177,10 +177,10 @@ export default {
       mescroll2: null,
       dataList: [], // 列表数据
       dataList2: [], // 列表数据
-      mescrollUp: {
-        callback: this.upCallback,
-        dataList: [] // 列表数据
-      },
+      // mescrollUp: {
+      //   callback: this.upCallback,
+      //   dataList: [] // 列表数据
+      // },
       isEdit: false, // 是否获取编辑的列表数据
       largeScreenList: []
     }
@@ -405,13 +405,13 @@ export default {
     width: 1000px;
     height: auto;
     background-color: #fff;
+    border-radius: 10px;
     &_title {
       font-size: 42px;
       font-weight: normal;
       line-height: 42px;
       letter-spacing: 0em;
       color: #3d3d3d;
-      background-color: #fff;
       margin-top: 20px;
       margin-left: 20px;
     }

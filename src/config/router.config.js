@@ -40,6 +40,12 @@ export const asyncRouterMap = [
             name: 'reserve',
             component: () => import('@/views/reserve/frontPage'),
             meta: { title: 'menu.reserve.frontPage', keepAlive: true, permission: ['reserve'] }
+          },
+          {
+            path: '/reserve/privateRoom',
+            name: 'privateRoom',
+            component: () => import('@/views/reserve/privateRoom'),
+            meta: { title: 'menu.reserve.privateRoom', keepAlive: true, permission: ['reserve'] }
           }
         ]
       },

@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @Version: 1.0
+ * @Author: pj
+ * @Date: 2023-06-13 11:45:47
+ * @LastEditors: pj
+ * @LastEditTime: 2023-06-22 13:37:41
+ */
 export default {
     'menu.welcome': 'Welcome',
     'menu.home': 'Home',
@@ -37,5 +45,6 @@ export default {
     'menu.account.trigger': 'Trigger Error',
     'menu.account.logout': 'Logout',
     'menu.reserve': 'Appointment number',
-    'menu.reserve.frontPage': 'Reserve'
+    'menu.reserve.frontPage': 'Reserve',
+    'menu.reserve.privateRoom': 'Book a Private Room'
 }
